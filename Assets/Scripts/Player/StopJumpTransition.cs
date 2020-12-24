@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class StopJumpTransition : Transition
 {
-    [SerializeField] private Animator _animator;
-
-
-    private void Update()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (/*_animator.GetCurrentAnimatorStateInfo(0).IsName("jump") && */_animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.95f)
+        if(collision.gameObject.TryGetComponent<Ground>(out Ground ground))
         {
             NeedTransit = true;
         }

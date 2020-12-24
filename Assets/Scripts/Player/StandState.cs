@@ -6,9 +6,8 @@ public class StandState : State
 {
     [SerializeField] private Animator _animator;
 
-    private void OnEnable()
+    private void Start()
     {
         _animator.Play("stand");
-        Debug.Log("StandState");
     }
 }
