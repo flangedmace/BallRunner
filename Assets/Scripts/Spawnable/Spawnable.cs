@@ -4,9 +4,9 @@ using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
 [RequireComponent(typeof(Rigidbody2D))]
-public class Spawned : MonoBehaviour
+public class Spawnable : MonoBehaviour
 {
-    [ Min(0), SerializeField] private float _moveSpeed;
+    [Min(0), SerializeField] private float _moveSpeed;
     [SerializeField] private Rigidbody2D _rigidbody;
     [SerializeField] private float _suicideTime;
 

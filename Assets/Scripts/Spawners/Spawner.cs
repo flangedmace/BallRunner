@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] protected Spawned Template;
+    [SerializeField] protected Spawnable Template;
     [SerializeField] protected Transform[] SpawnPoints;
     [SerializeField] protected float SpawnInterval;
 

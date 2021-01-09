@@ -8,28 +8,27 @@ using System;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI _coinstext;
-
     public int Coins => _coins;
-
     public UnityAction Death;
 
-    private int _coins = 0;
+    [SerializeField] private TextMeshProUGUI _coinsText;
 
-    private void Start()
-    {
-        SetCoinsText();
-    }
+    private int _coins = 0;
 
     public void TakeCoin()
     {
         _coins++;
 
-        SetCoinsText();
+        UpdateText();
     }
 
-    private void SetCoinsText()
+    private void Start()
     {
-        _coinstext.text = Convert.ToString(_coins);
+        UpdateText();
+    }
+
+    private void UpdateText()
+    {
+        _coinsText.text = Convert.ToString(_coins);
     }
 }

@@ -10,18 +10,20 @@ public class AuthorsPanel : MonoBehaviour
     [SerializeField] private Animator _animator;
     [SerializeField] private AnimationClip _hiding;
 
-    public void Hide(GameObject panel)
-    {
-        _animator.Play("Hiding");
+    [SerializeField] private GameObject _mainMenu;
 
-        StartCoroutine(ClosePanel(panel));
+    public void Hide()
+    {
+        StartCoroutine(CloseAuthorsPanel());
     }
 
-    private IEnumerator ClosePanel(GameObject panel)
+    private IEnumerator CloseAuthorsPanel()
     {
+        _animator.Play(_hiding.name);
+
         yield return new WaitForSeconds(_hiding.length);
 
         gameObject.SetActive(false);
-        panel.SetActive(true);
+        _mainMenu.SetActive(true);
     }
 }
