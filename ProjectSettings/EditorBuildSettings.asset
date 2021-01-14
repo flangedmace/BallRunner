@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Level.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: e26c23fba8c633a42b59e854ca8134fd
+  - enabled: 1
+    path: Assets/Plugins/unity-typed-scenes-master/unity-typed-scenes-master/Assets/Plugins/TypedScenes/Samples/SampleScene.unity
+    guid: 6a9d3499f57df8f4092fb3b6f981446f
   m_configObjects: {}
