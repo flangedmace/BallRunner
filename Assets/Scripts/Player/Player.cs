@@ -1,15 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
 using System;
 
 public class Player : MonoBehaviour
 {
-    public int Coins => _coins;
     public UnityAction Death;
+
+    public int Coins => _coins;
 
     [SerializeField] private TextMeshProUGUI _coinsText;
 
